@@ -4,7 +4,7 @@ namespace Jokenpo
 {
     class Program
     {
-        enum mao { Pedra = 1, Papel = 2, Tesoura = 3 }
+        enum Mao { Pedra = 1, Papel = 2, Tesoura = 3 }
 
         static void Main(string[] args)
         {
@@ -35,8 +35,8 @@ namespace Jokenpo
                 }
 
                 // Converte para o tipo mao
-                mao maoJogador = (mao)opcao;
-                mao maoPc = (mao)random.Next(1, 4);
+                Mao maoJogador = (Mao)opcao;
+                Mao maoPc = (Mao)random.Next(1, 4);
 
                 // Exibe as escolhas
                 Console.WriteLine($"\nVocê escolheu: {maoJogador}");
@@ -47,9 +47,9 @@ namespace Jokenpo
                 {
                     Console.WriteLine("Resultado: Empate!\n");
                 }
-                else if ((maoJogador == mao.Pedra && maoPc == mao.Tesoura) ||
-                         (maoJogador == mao.Papel && maoPc == mao.Pedra) ||
-                         (maoJogador == mao.Tesoura && maoPc == mao.Papel))
+                else if ((maoJogador == Mao.Pedra && maoPc == Mao.Tesoura) ||
+                         (maoJogador == Mao.Papel && maoPc == Mao.Pedra) ||
+                         (maoJogador == Mao.Tesoura && maoPc == Mao.Papel))
                 {
                     Console.WriteLine("Resultado: Parabéns, você ganhou!\n");
                 }
